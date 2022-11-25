@@ -10,6 +10,8 @@ import StoreIcon from "@mui/icons-material/Store";
 import StarsIcon from "@mui/icons-material/Stars";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
+import { useNavigate } from "react-router-dom";
+import { SupervisorAccount } from "@mui/icons-material";
 
 const icons = [
   {
@@ -42,18 +44,31 @@ const icons = [
     icon: <InventoryIcon />,
     url: "/stock/products/",
   },
+  {
+    title: "Admin Panel",
+    icon: <SupervisorAccountIcon />,
+    url: "https://13648.fullstack.clarusway.com/admin",
+  },
 ];
 
 const MenuListItems = () => {
+  const navigate = useNavigate();
   return (
     <div>
       <List>
-        {icons?.map((item, index) => (
+        {icons?.map(({ url, icon, title }, index) => (
           <ListItem key={index} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>{item.icon}</ListItemIcon>
-              <ListItemText primary={item.title} />
-            </ListItemButton>
+            {url.includes("http") ? (
+              <ListItemButton to="https://13648.fullstack.clarusway.com/admin">
+                <ListItemIcon>{icon}</ListItemIcon>
+                <ListItemText primary={title} />
+              </ListItemButton>
+            ) : (
+              <ListItemButton onClick={() => navigate(url)}>
+                <ListItemIcon>{icon}</ListItemIcon>
+                <ListItemText primary={title} />
+              </ListItemButton>
+            )}
           </ListItem>
         ))}
       </List>
