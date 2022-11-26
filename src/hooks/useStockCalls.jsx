@@ -1,11 +1,10 @@
 import axios from "axios";
-import { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchFail, fetchStart, getSuccess } from "../features/stockSlice";
 
-const Firms = () => {
+const useStockCalls = () => {
   const dispatch = useDispatch();
-
   const { token } = useSelector((state) => state.auth);
   const getFirms = async () => {
     const url = "firms";
@@ -23,11 +22,7 @@ const Firms = () => {
     }
   };
 
-  useEffect(() => {
-    getFirms();
-  }, []);
-
-  return <div>Firms</div>;
+  return <div>useStockCalls</div>;
 };
 
-export default Firms;
+export default useStockCalls;
