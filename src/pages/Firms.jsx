@@ -2,10 +2,11 @@ import { useEffect } from "react";
 import useStockCalls from "../hooks/useStockCalls";
 
 const Firms = () => {
-  const { getFirms } = useStockCalls();
+  const { getFirms, getSales } = useStockCalls();
 
   useEffect(() => {
     getFirms();
+    getSales();
     // eslint-disable-next-line
   }, []);
 
