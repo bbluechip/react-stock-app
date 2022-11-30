@@ -51,8 +51,22 @@ const useStockCalls = () => {
       toastErrorNotify(`${url} can not be added`);
     }
   };
-
   const postFirm = (info) => postStockData(info, "firms");
+
+  //! PUT CALLS
+
+  const putStockData = async (info, url) => {
+    try {
+      await axiosWithToken.put(`stock/${url}/${info.id}/`, info);
+      toastSuccessNotify(`Firm successfully updated`);
+      getStockData(url);
+    } catch (error) {
+      console.log("error :", error);
+      toastErrorNotify(`Firm can not be updated`);
+    }
+  };
+
+  const putFirm = (info) => putStockData(info, "firms");
 
   return {
     getFirms,
@@ -61,6 +75,8 @@ const useStockCalls = () => {
     getStockData,
     postFirm,
     postStockData,
+    putFirm,
+    putStockData,
   };
 };
 
