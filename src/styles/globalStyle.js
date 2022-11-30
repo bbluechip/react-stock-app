@@ -1,7 +1,7 @@
 export const btnHoverStyle = {
   cursor: "pointer",
   transition: "0.3s",
-  "&:hover": { color: "tomato", transform: "scale(1.2)" },
+  "&:hover": { color: "tomato", transform: "scale(1.005)" },
 };
 export const modalStyle = {
   position: "absolute",
@@ -16,10 +16,8 @@ export const modalStyle = {
 };
 export const flexCenter = {
   display: "flex",
-  flexDirection: "column",
   justifyContent: "center",
-  alignItems: "center",
-  gap: 2,
+  gap: 1,
 };
 
 export const flex = {
@@ -32,7 +30,8 @@ export const flex = {
 export const flexColumn = {
   display: "flex",
   flexDirection: "column",
-  gap: 2,
+  justifyContent: "center",
+  gap: 1,
 };
 
 export const arrowStyle = {
