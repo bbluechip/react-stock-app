@@ -1,6 +1,6 @@
 
 
-## react router worksheet
+## react stock app
 ![Animation](https://github.com/bbluechip/react-stock-app/blob/master/stock%20app.gif)
 
 
