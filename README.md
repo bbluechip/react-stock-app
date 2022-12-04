@@ -9,7 +9,7 @@
 for read only error try this username and password: `email: noah@cw.com password: Clarusway1.`
 
 ## Used in this project
-👉 React js, Create react app, context api, react components, jsx, api, react-router, material ui, react-redux, formik, yup, axios, tremor libraries.
+👉 React js, Create react app, context api, react components, custom hooks, useState, useEffect, jsx, api, react-router, material ui, react-redux, formik, yup, axios, tremor libraries.
 
 👉 CSS properties.
 
