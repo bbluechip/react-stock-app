@@ -6,7 +6,7 @@
 
 👉[Click here to see the page](https://react-stock-app-eight.vercel.app/)
 
-for read only eror try this username and password: `email: noah@cw.com password: Clarusway1.`
+for read only error try this username and password: `email: noah@cw.com password: Clarusway1.`
 
 ## Used in this project
 👉 React js, Create react app, context api, react components, jsx, api, react-router, material ui, react-redux, formik, yup, axios, tremor libraries.
